@@ -209,7 +209,7 @@ for ((i=0; i<end; i++))
 do
         logit "INFO" "Starting jmeter server on ${slave_pods[$i]} in parallel"
         kubectl cp -c jmslave "scenario/${jmx_dir}/jmeter_injector_start.sh" -n "${namespace}" "${slave_pods[$i]}:/opt/jmeter/jmeter_injector_start"
-        kubectl exec -c jmslave -i -n "${namespace}" "${slave_pods[$i]}" -- /bin/bash "/opt/jmeter/jmeter_injector_start" &  
+        kubectl exec -c jmslave -i -n "${namespace}" "${slave_pods[$i]}" -- //bin//bash "/opt/jmeter/jmeter_injector_start" &  
 done
 
 
